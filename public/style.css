@@ -84,6 +84,9 @@ nav .left h1 {
 .comment {
   margin: 5% 15px;
 }
+.alert_model{
+  visibility: hidden;
+}
 
 .smalldiv {
   font-size: 30px;
