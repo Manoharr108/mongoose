@@ -10,7 +10,7 @@ const cors = require('cors')
 app.use(express.static(path.join(__dirname,"./public")))
 app.use(cors("*"))
 
-app.post('/post', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
         const product = await operation.create(req.body)
         res.status(200).json(product)
@@ -21,7 +21,7 @@ app.post('/post', async (req, res) => {
 })
 
 
-app.get('/post', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const product = await operation.find({})
         res.status(200).json(product)

@@ -35,7 +35,7 @@ const generateComment = async () => {
     //color
     let color = colorArr[Math.floor(Math.random() * colorArr.length - 1)]
 
-    const res = await fetch('http://localhost:3000/post', ({
+    const res = await fetch('https://test-api-i49m.onrender.com/', ({
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -52,6 +52,7 @@ const generateComment = async () => {
 
 
     document.getElementById("textarea").value = ""
+    
 
 }
 
@@ -74,7 +75,7 @@ clrbtn.addEventListener("click", (e) => {
 })
 
 async function LoadInitial() {
-    const res = await fetch('http://localhost:3000/post');
+    const res = await fetch('https://test-api-i49m.onrender.com/');
     const jsondata = await res.json()
     // console.log(jsondata)
 
