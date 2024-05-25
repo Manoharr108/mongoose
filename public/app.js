@@ -19,7 +19,7 @@ let i = 0
 let colorArr = ["primary", "secondary", "success", "danger", "warning", "info", "light"]
 
 const generateComment = async () => {
-    document.getElementsByClassName('alert_model')[0].setAttribute("class","alert alert-warning alert-dismissible fade show")
+    // document.getElementsByClassName('alert_model')[0].setAttribute("class","alert alert-warning alert-dismissible fade show")
     //name
     let aname = arr[Math.floor(Math.random() * arr.length)]
     //date
