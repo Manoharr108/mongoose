@@ -19,10 +19,12 @@ let i = 0
 let colorArr = ["primary", "secondary", "success", "danger", "warning", "info", "light"]
 
 const generateComment = async () => {
-    document.getElementsByClassName('alert')[0].innerHTML=`<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong> <i class="fa-solid fa-circle-check"></i>       Comment posted!</strong> refresh the page!!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div> `
+    setTimeout(()=>{
+        document.getElementsByClassName('alert')[0].innerHTML=`<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong> <i class="fa-solid fa-circle-check"></i>       Comment posted!</strong> refresh the page!!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> `
+    },2000)
     //name
     let aname = arr[Math.floor(Math.random() * arr.length)]
     //date
