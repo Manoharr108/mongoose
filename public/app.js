@@ -13,7 +13,7 @@ let arr = ["Anonymous", "Secret or Secretive", "Ghost", "Incognito", "Nameless",
     "Faceless",
     "Whistleblower",
     "Silent",
-    "Anon",]
+    "Anon"]
 
 let i = 0
 let colorArr = ["primary", "secondary", "success", "danger", "warning", "info", "light"]
