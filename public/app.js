@@ -1,29 +1,19 @@
 let btn = document.getElementById("addbtn");
 let clrbtn = document.getElementById("clear");
 
-
 let arr = ["Anonymous", "Secret or Secretive", "Ghost", "Incognito", "Nameless", "Unknown", "Discrete",
-"Unnamed",
-"Mystery or Mysterious ",
-"Invisible",
-"Hidden",
-"Disguised",
-"Covet",
-"Masked",
-"Faceless",
-"Whistleblower",
-"Silent",
-"Anon"];
+    "Unnamed", "Mystery or Mysterious", "Invisible", "Hidden", "Disguised", "Covet", "Masked", "Faceless",
+    "Whistleblower", "Silent", "Anon"];
 
 let aname = arr[Math.floor(Math.random() * arr.length)];
-let visible_name = document.getElementsByClassName('forname')[0]
-visible_name.value = aname
-    
-    let colorArr = ["primary", "secondary", "success", "danger", "warning", "info", "light"];
-    
-    const generateComment = async () => {   
-        var d = new Date();
-        var month;
+let visible_name = document.getElementsByClassName('forname')[0];
+visible_name.value = aname;
+
+let colorArr = ["primary", "secondary", "success", "danger", "warning", "info", "light"];
+
+const generateComment = async () => {
+    var d = new Date();
+    var month;
     if (d.getMonth) {
         month = d.getMonth() + 1;
     }
@@ -31,12 +21,11 @@ visible_name.value = aname
     let time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     let content = document.getElementById('textarea').value;
     let status;
-    if(content!==""){
-        status = true
+    if (content !== "") {
+        status = true;
     }
     let color = colorArr[Math.floor(Math.random() * colorArr.length)];
-    if(status){
-
+    if (status) {
         const res = await fetch('https://test-api-i49m.onrender.com/', ({
             method: "POST",
             headers: {
@@ -51,12 +40,12 @@ visible_name.value = aname
             })
         }));
     }
-    
-    
+
     document.getElementById("textarea").value = "";
-    visible_name.value = arr[Math.floor(Math.random() * arr.length)]
-    
-    LoadInitial(); // Refresh comments after posting
+    visible_name.value = arr[Math.floor(Math.random() * arr.length)];
+
+    // Reload the page to display the new comment
+    location.reload();
 };
 
 btn.addEventListener("click", (e) => {
