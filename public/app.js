@@ -1,3 +1,4 @@
+alert("Server maintained, autodeleted all!")
 let btn = document.getElementById("addbtn");
 let clrbtn = document.getElementById("clear");
 
